@@ -37,6 +37,48 @@
                 });
         </script>        
 
+        <style id="style reddit" type="text/css">
+
+	.reddit-header {
+        display:none !important;
+        }
+	    
+	.widget {
+   	text-shadow: 0px 0px 0px rgb(6, 6, 6);
+	}  
+	    
+	.rembeddit-content {
+	font-size:small;
+ 	color:#ffffff !important;  
+        }	    
+	
+	.reddit-link-title {
+	font-size:small;
+	color:#d7bc91 !important;    
+        }  
+
+	.score.unvoted {
+ 	display:none !important;    
+        }  
+	    
+	.score.dislikes {
+	display:none !important;    
+        }
+	    
+	.reddit-comment-link {
+ 	color:#d7bc91 !important;    
+        }
+	    
+	.reddit-voting-arrows{
+	float:top; 
+	display:block;
+	border:none;
+	margin-top:5px;
+	}
+	    
+        </style>
+
+        
         <!-- Definity CSS -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="stylesheet" href="assets/styles/responsive.css">
@@ -325,6 +367,88 @@
                     <li><a href="#">ES</a></li>
                   </ul>
                 </li><!-- / Languages -->
+                      
+                      
+                      
+                <!-- News -->
+                                
+                <li class="dropdown mega-fw">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false"><span style="color: red;">News </span><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <div class="col-lg-4 mb-sm-20">
+                    <li class="dropdown-header">Markets</li>
+                    <li role="separator" class="divider"></li>
+                    <center><p>
+                    <script type="text/javascript">
+		        baseUrl = "https://widgets.cryptocompare.com/";
+		        var scripts = document.getElementsByTagName("script");
+		        var embedder = scripts[ scripts.length - 1 ];
+		        var cccTheme = {"General":{"background":"#000000","borderWidth":"0px","borderColor":"#000","borderRadius":"4px 4px 0 0"},"Header":{"background":"#000000","color":"#FFF","displayFollowers":false},"Followers":{"background":"","color":"#CCC","borderColor":"#000","counterBorderColor":"","counterColor":""},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"animation":true,"fillColor":"rgba(253, 201, 4, 1)","borderColor":"#bf9700"},"Conversion":{"background":"#000","color":"#999"}};
+		        (function (){
+		        var appName = encodeURIComponent(window.location.hostname);
+		        if(appName==""){appName="local";}
+		        var s = document.createElement("script");
+		        s.type = "text/javascript";
+		        s.async = true;
+		        var theUrl = baseUrl+'serve/v2/coin/chart?fsym=BLK&tsym=BTC';
+		        s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+		        embedder.parentNode.appendChild(s);
+		        })();
+    	                </script>
+	
+                    <div class="textwidget">
+	               <center><p>More charts: <a href="https://k.sosobtc.com/blk_btc38.html" target="_blank">BTC38 </a>;
+	               <a href="https://coinmarketcap.com/currencies/blackcoin/#charts" target="_blank"> CMC </a>;
+	               <a href="https://poloniex.com/exchange#btc_blk" target="_blank"> POLONIEX</a>
+		
+	            <script type="text/javascript">
+		        baseUrl = "https://widgets.cryptocompare.com/";
+		        var scripts = document.getElementsByTagName("script");
+		        var embedder = scripts[ scripts.length - 1 ];
+		        var cccTheme = {"General":{"background":"#171717","borderColor":"#171717"},"Header":{"background":"#171717","color":"#FFF"},"Header":{"background":"#171717","color":"#FFF","displayFollowers":false},"Followers":{"background":"#171717","color":"#171717","borderColor":"#171717","counterBorderColor":"#171717","counterColor":"#171717"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"animation":true,"fillColor":"#c8b267","borderColor":"#3e3e3e"},"EvenRow":{"background":"#171717","color":"#FFF","borderColor":"#444"},"OddRow":{"background":"#171717","color":"#FFF","borderColor":"#444"},"Trend":{"colorUnchanged":"#FFF"},"Conversion":{"background":"#171717","color":"#171717"}};
+		        (function (){
+		        var appName = encodeURIComponent(window.location.hostname);
+		        if(appName==""){appName="local";}
+		        var s = document.createElement("script");
+		        s.type = "text/javascript";
+		        s.async = true;
+		        var theUrl = baseUrl+'serve/v1/coin/list?fsym=BLK&tsyms=USD,CNY';
+		        s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+		        embedder.parentNode.appendChild(s);
+		        })();
+                    </script></center></div>
+
+                    <div class="textwidget"><center>
+   	            <script type="text/javascript">
+		        baseUrl = "https://widgets.cryptocompare.com/";
+		        var scripts = document.getElementsByTagName("script");
+		        var embedder = scripts[ scripts.length - 1 ];
+		        (function (){
+		        var appName = encodeURIComponent(window.location.hostname);
+		        if(appName==""){appName="local";}
+		        var s = document.createElement("script");
+		        s.type = "text/javascript";
+		        s.async = true;
+	        	var theUrl = baseUrl+'serve/v1/coin/list?fsym=BTC&tsyms=BTC,USD';
+	        	s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+	        	embedder.parentNode.appendChild(s);
+	        	})();
+    	            </script></center></div></div>
+
+                    <div class="col-lg-4 mb-sm-20">
+                        <li class="dropdown-header" >Reddit</li>
+                        <li role="separator" class="divider" ></li>
+    		    <div class="x-text" ><center><script src="https://www.reddit.com/r/blackcoin/new/.embed?limit=4&amp;style=off;sort=new;bordercolor=171717;bgcolor=171717;" type="text/javascript"></script></center></div></div>
+
+                    <div class="col-lg-4 mb-sm-20">
+                        <li class="dropdown-header">Twitter</li>
+                        <li role="separator" class="divider"></li>
+
+                    <div class="textwidget"><center><p style=" background-color: #171717;"><a class="twitter-timeline"  href="https://twitter.com/hashtag/Blackcoin" data-widget-id="746421924109164548" data-chrome="noheader noborders nofooter transparent noscrollbar"  >#Blackcoin Tweets</a><br />
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></center></div>
+                  </ul>
+                </li><!-- / News -->       
+                                           
 
               </ul><!-- / .nav .navbar-nav .navbar-right -->
 
