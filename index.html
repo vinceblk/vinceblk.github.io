@@ -37,7 +37,7 @@
                 });
         </script>        
 
-        <style id="style reddit" type="text/css">
+        <style id="custom styles" type="text/css">
 
 	.reddit-header {
         display:none !important;
@@ -76,17 +76,41 @@
 	margin-top:5px;
 	}
 	    
-        </style>
+        .gitter-open-chat-button,
+	.gitter-chat-embed {
+  	z-index: 9999;
+	}
+	
+	.gitter-open-chat-button{
+	background-color: #262626;
+	color: #ffffff;
+	}
 
-        
+	.gitter-open-chat-button:hover{
+	box-sizing:border-box;
+	background-color: #1a1a1a;
+	color:#fff
+	}
+    
+	</style>
+
+
+	<script>
+       	   ((window.gitter = {}).chat = {}).options = {
+           room: 'blkslack/blackcoin'
+           };
+        </script>
+        <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+	
         <!-- Definity CSS -->
         <link rel="stylesheet" href="assets/styles/main.css">
         <link rel="stylesheet" href="assets/styles/responsive.css">
 
         <!-- JS -->
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body id="page-top" data-spy="scroll" data-target=".navbar">
+        </head>
+        <body id="page-top" data-spy="scroll" data-target=".navbar">
         <!-- Google Tag Manager -->
         <noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-MH7TSF"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
