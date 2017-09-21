@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="assets/styles/vendor/magnific-popup.css">
         <!-- Animate.css -->
         <link rel="stylesheet" href="assets/styles/vendor/animate.css">
+	<!-- Popup Maker -->
+	<link rel='stylesheet' id='popup-maker-site-css' href='../content/plugins/popup-maker/assets/css/site.min.css?ver=1.4.15' type='text/css' media='all' />
 
         <script type='text/javascript' src='content/plugins/jquery-updater/js/jquery-2.1.4.min.js'></script>
         <script type='text/javascript' src='content/plugins/scrollbar-designer/js/jquery.nicescroll.min.js'></script>
@@ -93,6 +95,18 @@
 	}
     
 	</style>
+	
+	
+	<style id="pum-styles" type="text/css">
+    	/* Popup Google Fonts */
+	@import url('http://fonts.googleapis.com/css?family=Acme|Montserrat');
+	/* Popup Theme 2865: Framed Border */
+	.pum-theme-2865, .pum-theme-framed-border { background-color: rgba( 2, 2, 2, 0.4 ) } 
+	.pum-theme-2865 .pum-container, .pum-theme-framed-border .pum-container { padding: 20px; border-radius: 21px; border: 20px outset #ddb77a; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 35, 34, 33, 1 ) } 
+	.pum-theme-2865 .pum-title, .pum-theme-framed-border .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 32px; line-height: 36px } 
+	.pum-theme-2865 .pum-content, .pum-theme-framed-border .pum-content { color: #2d2d2d; font-family: inherit } 
+	.pum-theme-2865 .pum-content + .pum-close, .pum-theme-framed-border .pum-content + .pum-close { height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Acme; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) } 
+        </style>
 
 
 	<script>
@@ -447,7 +461,7 @@
               <div class="row">
                 <div class="ws-s"></div>
                 <ul class="t-clients clients-slider ws-s">
-                  <li><span class="popmake-github"><img src="assets/images/slack.png" alt="Github"></span></li>
+                  <li><span class="popmake-2890"><img src="assets/images/slack.png"></span></li>
                   <li><a href="https://twitter.com/CoinBlack" target="_blank"><img src="assets/images/twitter.png" alt="Twitter"></a></li>
                   <li><a href="https://www.facebook.com/coinblack" target="_blank"><img src="assets/images/facebook.png" alt="Facebook"></a></li>
                   <li><a href="https://t.me/blackcoin" target="_blank"><img src="assets/images/telegram.png" alt="Telegram"></a></li>
@@ -634,9 +648,19 @@
             </div><!-- / .container -->
           </div><!-- / .copyright -->
         
-    
+          <div id="pum-2890" class="pum pum-overlay pum-theme-2865 popmake-overlay" data-popmake="{&quot;id&quot;:2890,&quot;slug&quot;:&quot;slack&quot;,&quot;theme_id&quot;:2865,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;auto&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height_auto&quot;:&quot;1&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;grow&quot;,&quot;animation_speed&quot;:&quot;50&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;location&quot;:&quot;center &quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;,&quot;f4_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}" role="dialog" aria-hidden="true" >
+		<div id="popmake-2890" class="pum-container popmake theme-2865 pum-position-fixed">	
+			<div class="pum-content popmake-content">
+			<center><span style="color: #ffffff;">Slack</span></center><br />
+			<center><a href="https://blackcoin-team.slack.com/">Log in</a> / <a href="https://slack-blackcoin.herokuapp.com/">Join</a></center>
+			</div>
+			<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×            </button>
+	        </div>
+	 </div>
 
-        <!-- ========== Scripts ========== -->                  
+        <!-- ========== Scripts ========== -->  
+	<script type='text/javascript' src='../content/plugins/popup-maker/assets/js/site.min.js?defer&amp;ver=1.4.15' defer='defer'></script>
         <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
         <script src="assets/js/vendor/google-fonts.js"></script>
         <script src="assets/js/vendor/jquery.easing.js"></script>
