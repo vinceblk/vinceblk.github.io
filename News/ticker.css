@@ -85,7 +85,7 @@
 	}
 	.ticker-container ul div {
 		height: 100%;
-		left: 170px;
+		left: 0px;
 	}
 	.ticker-container ul div.ticker-active {
 		top: 0;
