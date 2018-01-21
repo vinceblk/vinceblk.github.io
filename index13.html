@@ -593,9 +593,29 @@
 			
      
      
+			
+			
+			
      
      
-     
+     <div style="width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
+
+	<div class="breakingNews" id="bn1">
+    	<div class="bn-title"><h2>News From BBC & CNN</h2><span></span></div>
+        <ul>
+        	
+        </ul>
+        <div class="bn-navi">
+        	<span></span>
+            <span></span>
+        </div>
+    </div>
+
+</div>
+			
+			
+			
+			
      
      
      
@@ -1184,7 +1204,19 @@
  </script>
 		  
 		  
-		  
+		<script>
+	$(window).load(function(e) {
+        $("#bn1").breakingNews({
+			effect		:"slide-h",
+			autoplay	:true,
+			timer		:3000,
+			color		:"green",
+			feed		:"http://feeds.bbci.co.uk/news/business/rss.xml,http://rss.cnn.com/rss/edition.rss",
+			feedlabels	:"BBC News,CNN News",
+			feedcount	:3	
+		});
+    });
+</script>  
 		  
 		  
 		  
