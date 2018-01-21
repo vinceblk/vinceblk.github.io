@@ -39,6 +39,23 @@
                 });
         </script>
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<link rel='stylesheet' id='qis_style-css'  href='content/plugins/quick-interest-slider/quick-interest-slider.css' type='text/css' media='all' />
    	<style type="text/css" media="screen">.qis_form.rounded {border:0px solid #ddb77a;}form.qis_form {background:#FFF;}
     	.qis_form {width:550px;max-width:100%;color: ;}
@@ -368,35 +385,7 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-			
 			
 			
 			
@@ -1036,6 +1025,50 @@ function showSlides(n) {
         <script src="assets/js/vendor/jquery.ajaxchimp.js"></script>
         <script src="assets/js/vendor/animDots.js"></script>
 
+		
+		
+		
+		
+		
+		
+		
+		<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
         
         <!-- Definity JS -->
         <script src="assets/js/main.js"></script>
