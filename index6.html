@@ -134,196 +134,29 @@
 		
 		
 		
-		*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	.slider-wrapper div {position: relative;}
+.slider-wrapper {margin-top: 5vw;  margin-left: 11vw;}
+.slide-image {height: 24vw;}
+.slide-image img {width: 24vw; cursor: pointer;}
+.slide-content {width: 25vw; color: #fff; padding:3vw 18vw 3vw 9vw;}
+.slide-date {color: #0a8acb; font-size: 1.1vw; font-weight: 400; letter-spacing: 0.1vw; padding-bottom: 1.4vw;}
+.slide-title {font-size: 1.2vw; font-weight: 400; letter-spacing: 0.1vw; line-height: 1.55vw; padding-bottom: 1.8vw;}
+.slide-text {font-size: 0.80vw; line-height: 1.2vw; opacity: 0.8; padding-bottom: 4vw;}
+.slide-more {font-weight: 400; letter-spacing: 0.1vw; float: left; font-size: 0.9vw;}
+.slide-bullet {width: 0.5vw; height: 0.5vw; background-color: #0b8bcc; border-radius: 200%; position: relative; margin-left: 1.2vw;}
+.slide-nav {margin-left: 64vw; margin-top: -5.5vw;}
+
+div.overlay-blue {width: 100%; height: 100%; position: absolute; top: 0; transition: 0.5s ease all;}
+div.overlay-blue:hover {background-color: rgba(13, 27, 43, 0.5);}
+
+.arrows{width: 3.5vw; margin-top: -5.8vw; margin-left: 72vw; position: relative;}
+.arrow {display: inline-block; position: absolute; width: 1.2vw; height: 1.2vw; background: transparent; text-indent: -9999px; border-top: 0.15vw solid #fff; border-left: 0.15vw solid #fff; transition: all .1s ease-in-out; text-decoration: none; color: transparent;
 }
-
-body {
-  overflow: hidden;
-  font-family: Helvetica, Arial, sans-serif;
+.arrow:hover {border-color: #0A8ACB; border-width: 0.25vw;
 }
-
-$numOfSlides: 5;
-$slidingAT: 1.3s;
-$controlSize: 60px;
-
-.slider {
-  position: relative;
-  height: 100vh;
-
-  &__slides {
-    z-index: 1;
-    position: relative;
-    height: 100%;
-  }
-
-  &__control {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    width: $controlSize;
-    height: $controlSize;
-    margin-left: $controlSize/-2;
-    margin-top: $controlSize/-2;
-    border-radius: 50%;
-    background: #fff;
-    transition: background-color 0.3s;
-    cursor: pointer;
-
-    &--right {
-      left: 95%;
-    }
-    
-    &:hover {
-      background-color: #2da6ff;
-    }
-
-    &-line {
-      position: absolute;
-      left: 23px;
-      top: 50%;
-      width: 3px;
-      height: 14px;
-      transform-origin: 50% 0;
-      transform: rotate(-45deg);
-
-      &:nth-child(2) {
-        transform: translateY(1px) rotate(-135deg);
-      }
-
-      .slider__control--right & {
-        left: 37px;
-        transform-origin: 1px 0;
-        transform: rotate(45deg);
-
-        &:nth-child(2) {
-          transform: translateY(1px) rotate(135deg);
-        }
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #e2e2e2;
-        transition: background-color 0.3s;
-      }
-
-      .slider__control:hover &:after {
-        background-color: #fff;
-      }
-
-      .slider__control.a--rotation & {
-
-        &:after {
-          animation: arrowLineRotation 0.49s;
-        }
-
-        &:nth-child(1):after {
-          animation: arrowLineRotationRev 0.49s;
-        }
-      }
-    }
-  }
-}
-
-@keyframes arrowLineRotation {
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes arrowLineRotationRev {
-  to {
-    transform: rotate(-180deg);
-  }
-}
-
-.slide {
-  overflow: hidden;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 150vmax;
-  height: 150vmax;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  transition: clip-path 0s $slidingAT*0.7;
-  clip-path: circle($controlSize/2 at 120vw 50%);
-
-  &.s--prev {
-    clip-path: circle($controlSize/2 at 30vw 50%);
-  }
-
-  &.s--active {
-    z-index: 1;
-    transition: clip-path $slidingAT;
-    clip-path: circle(120vmax at 120vw 50%);
-    
-    &.s--active-prev {
-      clip-path: circle(120vmax at 30vw 50%);
-    }
-  }
-
-  @for $i from 1 through $numOfSlides {
-    &:nth-child(#{$i}) {
-      .slide__inner {
-        background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/onepgscr-#{$i+1}.jpg');
-      }
-    }
-  }
-
-  &__inner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100vw;
-    height: 100vh;
-    margin-left: -50vw;
-    margin-top: -50vh;
-    background-size: cover;
-    background-position: center center;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.3);
-    }
-  }
-
-  &__content {
-    position: absolute;
-    left: 5%;
-    top: 50%;
-    margin-left: $controlSize/-2;
-    margin-top: $controlSize*0.8;
-    max-width: 480px;
-    color: #fff;
-  }
-
-  &__heading {
-    margin-bottom: 20px;
-    font-size: 60px;
-  }
-
-  &__text {
-    font-size: 25px;
-
-    a {
-      color: inherit;
-    }
-  }
-}
+.arrow:before {display: block; height: 200%; width: 200%; margin-left: -50%; margin-top: -50%; content: ""; transform: rotate(45deg);}
+.arrow.prev {transform: rotate(-45deg); left: 0;}
+.arrow.next {transform: rotate(135deg); right: 0;}
 		
 		
 		
@@ -586,58 +419,48 @@ $controlSize: 60px;
 			
 			
 			<div class="slider">
-  <!-- slides -->
-  <div class="slider__slides">
-    <div class="slide s--active">
-      <div class="slide__inner">
-        <div class="slide__content">
-          <h2 class="slide__heading">Clip-Path Revealing Slider</h2>
-          <p class="slide__text">Greetings, Traveler!</p>
-        </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide__inner">
-        <div class="slide__content">
-          <h2 class="slide__heading">Simple Animation</h2>
-          <p class="slide__text">Clip-path magic!</p>
-        </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide__inner">
-        <div class="slide__content">
-          <h2 class="slide__heading">Very Stylish Effect!</h2>
-          <p class="slide__text">It looks cool, isn't it?</p>
-        </div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide__inner">
-        <div class="slide__content">
-          <h2 class="slide__heading">Limited browser support</h2>
-          <p class="slide__text">Forget about IE/Edge and FF</p>
-        </div>
-      </div>
-    </div>
-    <div class="slide s--prev">
-      <div class="slide__inner">
-        <div class="slide__content">
-          <h2 class="slide__heading">Check my other stuff!</h2>
-          <p class="slide__text"><a href="https://codepen.io/suez/pens/public/" target="_blank">Other demos</a> and <a href="https://twitter.com/NikolayTalanov" target="_blank">Twitter</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- slides end -->
-  <div class="slider__control">
-    <div class="slider__control-line"></div>
-    <div class="slider__control-line"></div>
-  </div>
-  <div class="slider__control slider__control--right m--right">
-    <div class="slider__control-line"></div>
-    <div class="slider__control-line"></div>
-  </div>
+<div class="slider-wrapper flex">
+	<div class="slide flex">
+		<div class="slide-image slider-link prev"><img src="https://goranvrban.com/codepen/img2.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.07.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+	<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img3.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.08.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>	
+	<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img5.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.09.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+		<div class="slide flex">
+		<div class="slide-image slider-link next"><img src="https://goranvrban.com/codepen/img6.jpg"><div class="overlay"></div></div>
+		<div class="slide-content">
+			<div class="slide-date">30.10.2017.</div>
+			<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+			<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+			<div class="slide-more">READ MORE</div>
+		</div>	
+	</div>
+</div>
+<div class="arrows">
+<a href="#" title="Previous" class="arrow slider-link prev"></a>
+<a href="#" title="Next" class="arrow slider-link next"></a>
+</div>
 </div>
 			
 			
