@@ -95,4 +95,4 @@
 
 .breakingNews>.bn-navi,
 .breakingNews>ul>li>a,
-.breakingNews>.bn-navi>span{transition: .50s linear;-moz-transition: .50s linear;-webkit-transition: .50s linear;}
+.breakingNews>.bn-navi>span{transition: 2s linear;-moz-transition: 2s linear;-webkit-transition: 2s linear;}
