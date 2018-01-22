@@ -11,7 +11,7 @@
 					effect			:'fade',
 					fontstyle		:'normal',
 					autoplay		:false,
-					timer			:4000,
+					timer			:6000,
 					feed			:false,
 					feedlabels		:false,
 					feedcount		:5
