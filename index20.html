@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths wf-opensans-i3-active wf-opensans-i8-active wf-opensans-n4-active wf-opensans-n3-active wf-opensans-n6-active wf-opensans-n7-active wf-opensans-n8-active wf-montserrat-n4-active wf-montserrat-n7-active wf-active" style="overflow: hidden;" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <style>.gitter-hidden{box-sizing:border-box;display:none}.gitter-icon{box-sizing:border-box;width:22px;height:22px;fill:currentColor}.gitter-chat-embed{box-sizing:border-box;z-index:100;position:fixed;top:0;left:60%;bottom:0;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;background-color:#fff;border-left:1px solid #333;box-shadow:-12px 0 18px 0 rgba(50,50,50,.3);transition:-webkit-transform .3s cubic-bezier(.16,.22,.22,1.7);transition:transform .3s cubic-bezier(.16,.22,.22,1.7);transition:transform .3s cubic-bezier(.16,.22,.22,1.7),-webkit-transform .3s cubic-bezier(.16,.22,.22,1.7)}@context border-box{.gitter-chat-embed{box-sizing:border-box;background-color:#fff}}.gitter-chat-embed.is-collapsed:not(.is-loading){box-sizing:border-box;-webkit-transform:translateX(110%);transform:translateX(110%)}.gitter-chat-embed:after{box-sizing:border-box;content:"";z-index:-1;position:absolute;top:0;left:100%;bottom:0;right:-100%;background-color:#fff}@context border-box{.gitter-chat-embed:after{box-sizing:border-box;background-color:#fff}}@media(max-width:1150px){.gitter-chat-embed{box-sizing:border-box;left:45%}}@media(max-width:944px){.gitter-chat-embed{box-sizing:border-box;left:30%}}@media(max-width:600px){.gitter-chat-embed{box-sizing:border-box;left:15%}}@media(max-width:500px){.gitter-chat-embed{box-sizing:border-box;left:0;border-left:none}}.gitter-chat-embed>iframe{box-sizing:border-box;-webkit-box-flex:1;-ms-flex:1;flex:1;width:100%;height:100%;border:0}.gitter-chat-embed-loading-wrapper{box-sizing:border-box;position:absolute;top:0;left:0;bottom:0;right:0;display:none;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.is-loading .gitter-chat-embed-loading-wrapper{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex}.gitter-chat-embed-loading-indicator{box-sizing:border-box;opacity:.75;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzkyIDE3OTIiIGZpbGw9IiMzYTMxMzMiPjxwYXRoIGQ9Ik01MjYgMTM5NHEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41cS01MiAwLTkwLTM4dC0zOC05MHEwLTUzIDM3LjUtOTAuNXQ5MC41LTM3LjUgOTAuNSAzNy41IDM3LjUgOTAuNXptNDk4IDIwNnEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41LTkwLjUtMzcuNS0zNy41LTkwLjUgMzcuNS05MC41IDkwLjUtMzcuNSA5MC41IDM3LjUgMzcuNSA5MC41em0tNzA0LTcwNHEwIDUzLTM3LjUgOTAuNXQtOTAuNSAzNy41LTkwLjUtMzcuNS0zNy41LTkwLjUgMzcuNS05MC41IDkwLjUtMzcuNSA5MC41IDM3LjUgMzcuNSA5MC41em0xMjAyIDQ5OHEwIDUyLTM4IDkwdC05MCAzOHEtNTMgMC05MC41LTM3LjV0LTM3LjUtOTAuNSAzNy41LTkwLjUgOTAuNS0zNy41IDkwLjUgMzcuNSAzNy41IDkwLjV6bS05NjQtOTk2cTAgNjYtNDcgMTEzdC0xMTMgNDctMTEzLTQ3LTQ3LTExMyA0Ny0xMTMgMTEzLTQ3IDExMyA0NyA0NyAxMTN6bTExNzAgNDk4cTAgNTMtMzcuNSA5MC41dC05MC41IDM3LjUtOTAuNS0zNy41LTM3LjUtOTAuNSAzNy41LTkwLjUgOTAuNS0zNy41IDkwLjUgMzcuNSAzNy41IDkwLjV6bS02NDAtNzA0cTAgODAtNTYgMTM2dC0xMzYgNTYtMTM2LTU2LTU2LTEzNiA1Ni0xMzYgMTM2LTU2IDEzNiA1NiA1NiAxMzZ6bTUzMCAyMDZxMCA5My02NiAxNTguNXQtMTU4IDY1LjVxLTkzIDAtMTU4LjUtNjUuNXQtNjUuNS0xNTguNXEwLTkyIDY1LjUtMTU4dDE1OC41LTY2cTkyIDAgMTU4IDY2dDY2IDE1OHoiLz48L3N2Zz4=);-webkit-animation:spin 2s infinite linear;animation:spin 2s infinite linear}@-webkit-keyframes spin{0%{box-sizing:border-box;-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{box-sizing:border-box;-webkit-transform:rotate(359.9deg);transform:rotate(359.9deg)}}@keyframes spin{0%{box-sizing:border-box;-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{box-sizing:border-box;-webkit-transform:rotate(359.9deg);transform:rotate(359.9deg)}}.gitter-chat-embed-action-bar{position:absolute;top:0;left:0;right:0;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-bottom:.7em;background:linear-gradient(180deg,#fff 0,#fff 50%,hsla(0,0%,100%,0))}.gitter-chat-embed-action-bar,.gitter-chat-embed-action-bar-item{box-sizing:border-box;display:-webkit-box;display:-ms-flexbox;display:flex}.gitter-chat-embed-action-bar-item{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:40px;height:40px;padding-left:0;padding-right:0;opacity:.65;background:none;background-position:50%;background-repeat:no-repeat;background-size:22px 22px;border:0;outline:none;cursor:pointer;cursor:hand;transition:all .2s ease}.gitter-chat-embed-action-bar-item:focus,.gitter-chat-embed-action-bar-item:hover{box-sizing:border-box;opacity:1}.gitter-chat-embed-action-bar-item:active{box-sizing:border-box;-webkit-filter:hue-rotate(80deg) saturate(150);filter:hue-rotate(80deg) saturate(150)}.gitter-chat-embed-action-bar-item-pop-out{box-sizing:border-box;margin-right:-4px;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMTcxLjQyOSIgZmlsbD0iIzNhMzEzMyI+PHBhdGggZD0iTTE1Ny4xNDMsMTAzLjU3MXYzNS43MTRjMCw4Ljg1NC0zLjE0NCwxNi40MjYtOS40MzEsMjIuNzEzcy0xMy44NTgsOS40MzEtMjIuNzEyLDkuNDMxSDMyLjE0MyBjLTguODU0LDAtMTYuNDI1LTMuMTQ0LTIyLjcxMi05LjQzMVMwLDE0OC4xNCwwLDEzOS4yODVWNDYuNDI5YzAtOC44NTQsMy4xNDQtMTYuNDI1LDkuNDMxLTIyLjcxMiBjNi4yODctNi4yODcsMTMuODU4LTkuNDMxLDIyLjcxMi05LjQzMWg3OC41NzJjMS4wNDEsMCwxLjg5NiwwLjMzNSwyLjU2NiwxLjAwNGMwLjY3LDAuNjcsMS4wMDQsMS41MjUsMS4wMDQsMi41NjdWMjUgYzAsMS4wNDItMC4zMzQsMS44OTctMS4wMDQsMi41NjdjLTAuNjcsMC42Ny0xLjUyNSwxLjAwNC0yLjU2NiwxLjAwNEgzMi4xNDNjLTQuOTExLDAtOS4xMTUsMS43NDktMTIuNjEyLDUuMjQ2IHMtNS4yNDYsNy43MDEtNS4yNDYsMTIuNjEydjkyLjg1NmMwLDQuOTExLDEuNzQ5LDkuMTE1LDUuMjQ2LDEyLjYxMnM3LjcwMSw1LjI0NSwxMi42MTIsNS4yNDVIMTI1YzQuOTEsMCw5LjExNS0xLjc0OCwxMi42MTEtNS4yNDUgYzMuNDk3LTMuNDk3LDUuMjQ2LTcuNzAxLDUuMjQ2LTEyLjYxMnYtMzUuNzE0YzAtMS4wNDIsMC4zMzQtMS44OTcsMS4wMDQtMi41NjdjMC42Ny0wLjY2OSwxLjUyNS0xLjAwNCwyLjU2Ny0xLjAwNGg3LjE0MyBjMS4wNDIsMCwxLjg5NywwLjMzNSwyLjU2NywxLjAwNEMxNTYuODA5LDEwMS42NzQsMTU3LjE0MywxMDIuNTI5LDE1Ny4xNDMsMTAzLjU3MXogTTIwMCw3LjE0M3Y1Ny4xNDMgYzAsMS45MzUtMC43MDcsMy42MDktMi4xMjEsNS4wMjJjLTEuNDEzLDEuNDE0LTMuMDg4LDIuMTIxLTUuMDIxLDIuMTIxYy0xLjkzNSwwLTMuNjA5LTAuNzA3LTUuMDIyLTIuMTIxbC0xOS42NDQtMTkuNjQzIGwtNzIuNzY3LDcyLjc2OWMtMC43NDQsMC43NDQtMS42LDEuMTE1LTIuNTY3LDEuMTE1cy0xLjgyMy0wLjM3MS0yLjU2Ny0xLjExNUw3Ny41NjcsMTA5LjcxYy0wLjc0NC0wLjc0NC0xLjExNi0xLjYtMS4xMTYtMi41NjcgYzAtMC45NjcsMC4zNzItMS44MjIsMS4xMTYtMi41NjZsNzIuNzY4LTcyLjc2OGwtMTkuNjQ0LTE5LjY0M2MtMS40MTMtMS40MTQtMi4xMi0zLjA4OC0yLjEyLTUuMDIyYzAtMS45MzUsMC43MDctMy42MDksMi4xMi01LjAyMiBDMTMyLjEwNSwwLjcwNywxMzMuNzc5LDAsMTM1LjcxNSwwaDU3LjE0M2MxLjkzNCwwLDMuNjA4LDAuNzA3LDUuMDIxLDIuMTIxQzE5OS4yOTMsMy41MzQsMjAwLDUuMjA4LDIwMCw3LjE0M3oiLz48L3N2Zz4=)}.gitter-chat-embed-action-bar-item-collapse-chat{box-sizing:border-box;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzEuNDI5IDE3MS40MjkiIGZpbGw9IiMzYTMxMzMiPjxwYXRoIGQ9Ik0xMjIuNDMzLDEwNi4xMzhsLTE2LjI5NSwxNi4yOTVjLTAuNzQ0LDAuNzQ0LTEuNiwxLjExNi0yLjU2NiwxLjExNmMtMC45NjgsMC0xLjgyMy0wLjM3Mi0yLjU2Ny0xLjExNmwtMTUuMjktMTUuMjkgbC0xNS4yOSwxNS4yOWMtMC43NDQsMC43NDQtMS42LDEuMTE2LTIuNTY3LDEuMTE2cy0xLjgyMy0wLjM3Mi0yLjU2Ny0xLjExNmwtMTYuMjk0LTE2LjI5NWMtMC43NDQtMC43NDQtMS4xMTYtMS42LTEuMTE2LTIuNTY2IGMwLTAuOTY4LDAuMzcyLTEuODIzLDEuMTE2LTIuNTY3bDE1LjI5LTE1LjI5bC0xNS4yOS0xNS4yOWMtMC43NDQtMC43NDQtMS4xMTYtMS42LTEuMTE2LTIuNTY3czAuMzcyLTEuODIzLDEuMTE2LTIuNTY3IEw2NS4yOSw0OC45OTZjMC43NDQtMC43NDQsMS42LTEuMTE2LDIuNTY3LTEuMTE2czEuODIzLDAuMzcyLDIuNTY3LDEuMTE2bDE1LjI5LDE1LjI5bDE1LjI5LTE1LjI5IGMwLjc0NC0wLjc0NCwxLjYtMS4xMTYsMi41NjctMS4xMTZjMC45NjcsMCwxLjgyMiwwLjM3MiwyLjU2NiwxLjExNmwxNi4yOTUsMTYuMjk0YzAuNzQ0LDAuNzQ0LDEuMTE2LDEuNiwxLjExNiwyLjU2NyBzLTAuMzcyLDEuODIzLTEuMTE2LDIuNTY3bC0xNS4yOSwxNS4yOWwxNS4yOSwxNS4yOWMwLjc0NCwwLjc0NCwxLjExNiwxLjYsMS4xMTYsMi41NjcgQzEyMy41NDksMTA0LjUzOSwxMjMuMTc3LDEwNS4zOTQsMTIyLjQzMywxMDYuMTM4eiBNMTQ2LjQyOSw4NS43MTRjMC0xMS4wMTItMi43MTctMjEuMTY4LTguMTQ4LTMwLjQ2OSBzLTEyLjc5Ny0xNi42NjctMjIuMDk4LTIyLjA5OFM5Ni43MjYsMjUsODUuNzE0LDI1cy0yMS4xNjgsMi43MTYtMzAuNDY5LDguMTQ3UzM4LjU3OSw0NS45NDUsMzMuMTQ3LDU1LjI0NlMyNSw3NC43MDMsMjUsODUuNzE0IHMyLjcxNiwyMS4xNjgsOC4xNDcsMzAuNDY5czEyLjc5NywxNi42NjYsMjIuMDk4LDIyLjA5OHMxOS40NTcsOC4xNDgsMzAuNDY5LDguMTQ4czIxLjE2OC0yLjcxNywzMC40NjktOC4xNDggczE2LjY2Ni0xMi43OTcsMjIuMDk4LTIyLjA5OFMxNDYuNDI5LDk2LjcyNiwxNDYuNDI5LDg1LjcxNHogTTE3MS40MjksODUuNzE0YzAsMTUuNTUxLTMuODMyLDI5Ljg5My0xMS40OTYsNDMuMDI0IGMtNy42NjQsMTMuMTMzLTE4LjA2MiwyMy41My0zMS4xOTQsMzEuMTk0Yy0xMy4xMzIsNy42NjQtMjcuNDc0LDExLjQ5Ni00My4wMjQsMTEuNDk2cy0yOS44OTItMy44MzItNDMuMDI0LTExLjQ5NiBjLTEzLjEzMy03LjY2NC0yMy41MzEtMTguMDYyLTMxLjE5NC0zMS4xOTRDMy44MzIsMTE1LjYwNywwLDEwMS4yNjUsMCw4NS43MTRTMy44MzIsNTUuODIyLDExLjQ5Niw0Mi42OSBjNy42NjQtMTMuMTMzLDE4LjA2Mi0yMy41MzEsMzEuMTk0LTMxLjE5NEM1NS44MjIsMy44MzIsNzAuMTY0LDAsODUuNzE0LDBzMjkuODkzLDMuODMyLDQzLjAyNCwxMS40OTYgYzEzLjEzMyw3LjY2NCwyMy41MywxOC4wNjIsMzEuMTk0LDMxLjE5NEMxNjcuNTk3LDU1LjgyMiwxNzEuNDI5LDcwLjE2NCwxNzEuNDI5LDg1LjcxNHoiLz48L3N2Zz4=)}.gitter-open-chat-button{z-index:100;position:fixed;bottom:0;right:10px;padding:1em 3em;background-color:#36bc98;border:0;border-top-left-radius:.5em;border-top-right-radius:.5em;font-family:sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-align:center;text-decoration:none;cursor:pointer;cursor:hand;transition:all .3s ease}.gitter-open-chat-button,.gitter-open-chat-button:visited{box-sizing:border-box;color:#fff}.gitter-open-chat-button:focus,.gitter-open-chat-button:hover{box-sizing:border-box;background-color:#3ea07f;color:#fff}.gitter-open-chat-button:focus{box-sizing:border-box;box-shadow:0 0 8px rgba(62,160,127,.6);outline:none}.gitter-open-chat-button:active{box-sizing:border-box;color:#eee}.gitter-open-chat-button.is-collapsed{box-sizing:border-box;-webkit-transform:translateY(120%);transform:translateY(120%)}</style><meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BlackCoin - Bounties &amp; Donate</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="http://blackcoin.co/favicon.ico">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/bootstrap.css">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/style.css">
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/linea-font.css">
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/font-awesome.css">
+        <!-- Slider -->
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/slick.css">
+        <!-- Lightbox -->
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/magnific-popup.css">
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/animate.css">
+       
+   
+       
+        <!-- Definity CSS -->
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/main2.css">
+        <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/responsive.css">
+ 
+        <!-- JS -->
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/webfont.js" type="text/javascript" async=""></script><script id="twitter-wjs" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widgets.js"></script><script async="" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/gtm.js"></script><script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/modernizr-2.js"></script>
+       
+    <link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/site.css">    
+       
+    <script type="text/javascript" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery-2_002.js"></script>
+        <script type="text/javascript" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_003.js"></script>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+                var nice = $("html").niceScroll({
+                        cursorcolor:"#000000",        
+                        cursorwidth: "8px",        
+                        cursorborder: "0px solid #ffffff",                                
+                        enablemousewheel:"true",
+                        railalign:"right",
+                        background: "rgba(255,255,255,1)"
+                });
+                       
+                $(".ws-m").each(function(index)
+                {
+                    var addr = $(this).find(".addr_string").text();
+                    var bounty_goal = $(this).find(".bounty-goal").text();
+                    var progress_title = $(this).find(".progress-title");
+                    var progress_bar = $(this).find(".progress-bar");
+                    var raised_percent = $(this).find(".raised-percent");
+                   
+                    bounty_goal = bounty_goal.replace(" BLK", "");
+                   
+                    $.getJSON("https://node.blackcoin.io/insight-api/addr/"+addr, function(json)
+                    {
+                        var raised = json.balance;
+                       
+                        var percent = Math.ceil(raised*100/bounty_goal);
+                       
+                        progress_title.find("span").text(raised);
+                        progress_bar.css("width", percent+"%");
+                        raised_percent.text(percent+"%");
+                    });
+                });
+        });
+        </script>    
+       
+       
+    <style id="custom styles" type="text/css">
+    .reddit-header {
+        display:none !important;
+        }
+       
+    .widget {
+    text-shadow: 0px 0px 0px rgb(6, 6, 6);
+    }  
+       
+    .rembeddit-content {
+    font-size:small;
+    color:#ffffff !important;  
+        }      
+   
+    .reddit-link-title {
+    font-size:small;
+    color:#d7bc91 !important;    
+        }  
+    .score.unvoted {
+    display:none !important;    
+        }  
+       
+    .score.dislikes {
+    display:none !important;    
+        }
+       
+    .reddit-comment-link {
+    color:#d7bc91 !important;    
+        }
+       
+    .reddit-voting-arrows{
+    float:top;
+    display:block;
+    border:none;
+    margin-top:5px;
+    }
+       
+        .gitter-open-chat-button,
+    .gitter-chat-embed {
+    z-index: 9999;
+    }
+   
+    .gitter-open-chat-button{
+    background-color: #262626;
+    color: #ffffff;
+    }
+    .gitter-open-chat-button:hover{
+    box-sizing:border-box;
+    background-color: #1a1a1a;
+    color:#fff
+    }
+       
+        a{color: #ddb77a;
+    text-decoration:none !important;}
+    a:hover{color:#ccc !important;}
+    a:focus{color:#ccc !important;}
+   
+    .sec-heading {
+    margin-bottom: 0px !important;}
+       
+    </style>
+ 
+    <style id="pum-styles" type="text/css">
+        /* Popup Google Fonts */
+    @import url('https://fonts.googleapis.com/css?family=Acme|Montserrat');
+    /* Popup Theme 2865: Framed Border */
+    .pum-theme-2865, .pum-theme-framed-border { background-color: rgba( 2, 2, 2, 0.4 ) }
+    .pum-theme-2865 .pum-container, .pum-theme-framed-border .pum-container { padding: 20px; border-radius: 21px; border: 20px outset #ddb77a; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 35, 34, 33, 1 ) }
+    .pum-theme-2865 .pum-title, .pum-theme-framed-border .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-size: 32px; line-height: 36px }
+    .pum-theme-2865 .pum-content, .pum-theme-framed-border .pum-content { color: #2d2d2d; font-family: inherit }
+    .pum-theme-2865 .pum-content + .pum-close, .pum-theme-framed-border .pum-content + .pum-close { height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Acme; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) }
+        </style>  
+       
+    <script>
+           ((window.gitter = {}).chat = {}).options = {
+           room: 'BlackCoin_Hub/General'
+           };
+        </script>
+    <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/sidecar.js" async="" defer="defer"></script><link rel="stylesheet" href="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/css.css" media="all">    
+       
+       
+       
+    <script type="text/javascript" charset="utf-8" async="" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/timeline.js"></script></head>
+    <body id="page-top">
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MH7TSF"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MH7TSF');</script>
+        <!-- End Google Tag Manager -->
+       
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+ 
+ 
+ 
+        <!-- ========== Preloader ========== -->
+ 
+        <div class="preloader" style="display: none;">
+          <img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/loader.svg" alt="Loading..." style="display: none;">
+        </div>
+ 
+ 
+ 
+        <!-- ========== Navigation ========== -->
+ 
+        <nav class="navbar navbar-default navbar-static-top mega navbar-inverse">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+ 
+              <!-- Logo -->
+              <a class="navbar-brand" href="http://blackcoin.co/"><img class="navbar-logo" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/logo-light.png" alt="Blackcoin - Logo"></a>
+            </div><!-- / .navbar-header -->
+ 
+            <!-- Navbar Links -->
+            <div id="navbar" class="navbar-collapse collapse" style="max-height: 930px;">
+              <ul class="nav navbar-nav">
+ 
+                <!-- Home -->
+                <li class="dropdown mega-fw">
+                  <a href="http://blackcoin.co/">Home</a>                  
+                </li><!-- / Home -->
+               
+ 
+                <!-- Discover -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false">Discover <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <div class="row">
+                      <!-- Basic -->
+                      <div class="col-lg-6 mb-sm-30">                        
+                                <li><a href="http://blackcoin.co/#about">About</a></li>  
+                        <li><a href="http://blackcoin.co/bounties/">Bounties</a></li>
+                        <li><a href="http://blackcoin.co/#community">Community</a></li>
+                        <li><a href="http://blackcoin.co/donations/">Donations</a></li>  
+                        <li><a href="http://blackcoin.co/#features">Features</a></li>
+                        <li><a href="http://blackcoin.co/faq/"><span style="color: #ddb77a;">FAQ</span></a></li>
+                      </div>                      
+                    </div><!-- / .row -->
+                  </ul><!-- / .dropdown-menu -->
+                </li><!-- / Discover -->
+ 
+ 
+                <!-- Buy -->
+                   <li class="dropdown mega-fw">                  
+                   <a href="http://blackcoin.co/#buy">Buy </a>
+                </li><!-- / Buy -->
+               
+ 
+                <!-- Downloads -->
+                <li class="dropdown mega-fw">                  
+                <a href="http://blackcoin.co/#downloads">Downloads </a>
+                </li><!-- / Downloads -->
+             
+             
+        <!-- Merchants -->
+                <li class="dropdown mega-fw">                  
+            <a href="http://blackcoin.co/#merchants">Merchants </a>
+        </li><!-- / Merchants -->
+                         
+ 
+ 
+               
+              </ul><!-- / .nav .navbar-nav -->
+             
+ 
+              <!-- Navbar Links Right -->
+              <ul class="nav navbar-nav navbar-right">
+ 
+                               
+             
+                     
+                <!-- Links -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false"><span style="color: #ddb77a;">Links <span class="caret"></span></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://chainz.cryptoid.info/blk/">Blockchain Explorer</a></li>
+                    <li><a href="https://www.coingecko.com/en/coins/blackcoin">Coingecko</a></li>
+                    <li><a href="https://coinmarketcap.com/currencies/blackcoin/#charts">Coinmarketcap</a></li>
+            <li><span class="popmake-2900 pum-trigger" style="cursor: pointer;">    GITHUB</span></li>
+                    <li><a href="https://bitinfocharts.com/top-100-richest-blackcoin-addresses.html">Richest Addresses</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/BlackCoin">Wikipedia</a></li>
+                  </ul>
+                </li><!-- / Links -->      
+                     
+                <!-- News -->
+                               
+                <li class="dropdown mega-fw">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350" role="button" aria-haspopup="true" aria-expanded="false"><span class="label label-red">News </span><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <div class="col-lg-4 mb-sm-20">
+                    <li class="dropdown-header">Markets</li>
+                    <li role="separator" class="divider"></li>
+                    <center><p>
+                    <script type="text/javascript">
+                baseUrl = "https://widgets.cryptocompare.com/";
+                var scripts = document.getElementsByTagName("script");
+                var embedder = scripts[ scripts.length - 1 ];
+                var cccTheme = {"General":{"background":"#000000","borderWidth":"0px","borderColor":"#000","borderRadius":"4px 4px 0 0"},"Header":{"background":"#000000","color":"#FFF","displayFollowers":false},"Followers":{"background":"","color":"#CCC","borderColor":"#000","counterBorderColor":"","counterColor":""},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"animation":true,"fillColor":"rgba(253, 201, 4, 1)","borderColor":"#bf9700"},"Conversion":{"background":"#000","color":"#999"}};
+                (function (){
+                var appName = encodeURIComponent(window.location.hostname);
+                if(appName==""){appName="local";}
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                var theUrl = baseUrl+'serve/v2/coin/chart?fsym=BLK&tsym=BTC';
+                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                embedder.parentNode.appendChild(s);
+                })();
+                </script><script type="text/javascript" async="" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/chart"></script><div class="ccc-widget ccc-chart"><div style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; border-radius: 4px 4px 0px 0px; text-align: left; border: 1px solid rgb(23, 23, 23); box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px; box-sizing: border-box; padding-bottom: 0px;"><div class="header-div" style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; font-weight: bold; font-size: 20px; text-align: left; line-height: 30px; height: 50px; padding: 10px; border-bottom: 1px solid rgb(23, 23, 23); box-sizing: border-box;"><a href="https://www.cryptocompare.com/coins/blk/" rel="nofollow" target="_blank" style="color: #FFF; text-decoration: none;">  <img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/blk.png" style="width: 26px; height: 26px; vertical-align: middle; margin-bottom: 3px; border: 0; position: inherit; max-width: inherit; left: inherit; right: inherit; top: inherit; bottom: inherit;">   BLK</a><a href="https://www.cryptocompare.com/coins/blk/" rel="nofollow" style="display: inline-block; float: right; background: #171717; border: 1px solid #171717; border-radius: 10px; padding-left: 15px; padding-right: 15px; font-size: 13px; line-height: 25px; margin-top: 2px; text-decoration: none; color: #171717;">  BTC 24 Hours Chart</a></div><div style="font-size: 25px; font-weight: 700; padding: 10px 10px 0px;"><a title="BlackCoin Price and market cap" rel="nofollow" href="https://www.cryptocompare.com/coins/blk/overview/BTC" target="_blank" style="color: #FFF; text-decoration: none;">  <span style="color: #FFF"> Ƀ 0.00004649  </span>   <span style="font-size: 13px; font-weight: bold; color: #A11B0A;"> (-5.81%)  </span></a></div><div style="float: left; font-size: 11px; font-weight: normal; line-height: 11px; margin-right: 0px; padding-left: 10px; margin-top: 0px; margin-bottom: 5px;"><span style="color: #CCC">  Last updated:</span>  <span style="color: #CCC">    Just now  </span></div><div style="float: right; font-size: 11px; font-weight: normal; line-height: 11px; margin-right: 0px; padding-right: 10px; margin-top: 0px; margin-bottom: 5px;"><span style="color: #CCC">  Mkt Cap:</span><span style="color: #CCC">  Ƀ 3,562.20</span></div><div style="clear: both; margin: 0px; padding: 0px; height: 0px; display: block; visibility: hidden;"></div><div><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px none; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;"></iframe><canvas style="display: block; height: 178px; margin: 0px; max-width: 100%; width: 357px;" width="357" height="178"></canvas></div></div></div></p></center>
+   
+                    <div class="textwidget">
+                   <center><p>More charts: <a href="https://bittrex.com/Market/Index?MarketName=BTC-BLK" target="_blank"><span style="color: #d7bc91;">BITTREX </span></a>;
+                   <a href="https://coinmarketcap.com/currencies/blackcoin/#charts" target="_blank"><span style="color: #d7bc91;"> CMC </span></a>;
+                   <a href="https://poloniex.com/exchange#btc_blk" target="_blank"><span style="color: #d7bc91;"> POLONIEX</span></a>
+       
+                <script type="text/javascript">
+                baseUrl = "https://widgets.cryptocompare.com/";
+                var scripts = document.getElementsByTagName("script");
+                var embedder = scripts[ scripts.length - 1 ];
+                var cccTheme = {"General":{"background":"#171717","borderColor":"#171717"},"Header":{"background":"#171717","color":"#FFF"},"Header":{"background":"#171717","color":"#FFF","displayFollowers":false},"Followers":{"background":"#171717","color":"#171717","borderColor":"#171717","counterBorderColor":"#171717","counterColor":"#171717"},"Data":{"priceColor":"#FFF","infoLabelColor":"#CCC","infoValueColor":"#CCC"},"Chart":{"animation":true,"fillColor":"#c8b267","borderColor":"#3e3e3e"},"EvenRow":{"background":"#171717","color":"#FFF","borderColor":"#444"},"OddRow":{"background":"#171717","color":"#FFF","borderColor":"#444"},"Trend":{"colorUnchanged":"#FFF"},"Conversion":{"background":"#171717","color":"#171717"}};
+                (function (){
+                var appName = encodeURIComponent(window.location.hostname);
+                if(appName==""){appName="local";}
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                var theUrl = baseUrl+'serve/v1/coin/list?fsym=BLK&tsyms=USD,EUR';
+                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                embedder.parentNode.appendChild(s);
+                })();
+                    </script><script type="text/javascript" async="" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/list_002"></script><div class="ccc-widget ccc-list"><div style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; border-radius: 4px 4px 0px 0px; border: 1px solid rgb(23, 23, 23);"><div class="header-div" style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; border-radius: 4px 4px 0px 0px; text-align: left; font-weight: bold; font-size: 20px; line-height: 30px; height: 50px; padding: 10px; border-bottom: 1px solid rgb(23, 23, 23); box-sizing: border-box;"><a href="https://www.cryptocompare.com/coins/blk/" rel="nofollow" target="_blank" style="color: #FFF; text-decoration: none;"> <img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/blk.png" style="width: 26px; height: 26px; vertical-align: middle; margin-bottom: 3px; border: 0; position: inherit; max-width: inherit; left: inherit; right: inherit; top: inherit; bottom: inherit;margin-bottom:inherit;"> BLK</a><a href="https://www.cryptocompare.com/coins/blk/" rel="nofollow" style="display: inline-block; float: right; background: #171717; border: 1px solid #171717; border-radius: 10px; padding-left: 15px; padding-right: 15px; font-size: 13px; line-height: 25px; margin-top: 2px; text-decoration: none; color: #171717;">    Followers     <span style="display: inline-block; padding-left: 10px; border-left: 1px solid #171717; margin-left: 10px; font-size: 11px; font-weight: normal; color: #171717;"> 490</span></a></div><a style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; color: rgb(255, 255, 255); border-bottom: 1px solid rgb(68, 68, 68); overflow: hidden; font-size: 14px; font-weight: 700; line-height: 36px; padding-left: 10px; padding-right: 10px; cursor: pointer; display: block;" href="https://www.cryptocompare.com/coins/blk/overview/" title="BlackCoin Price and market cap" target="_blank"><div style="float: right; line-height: 35px; font-size: 14px; font-weight: normal;"> <span style="font-weight: 700; color: #A11B0A;">        $ 0.5050         <span style="font-weight: normal; color: #A11B0A"> (-5.94%) <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzODYuMjU3IDM4Ni4yNTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4Ni4yNTcgMzg2LjI1NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8cG9seWdvbiBwb2ludHM9IjAsOTYuODc5IDE5My4xMjksMjg5LjM3OSAzODYuMjU3LDk2Ljg3OSAiIGZpbGw9IiNhMTFiMGEiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" style="width: 12px; height: 12px; vertical-align: inherit; border: 0; position: inherit; max-width: inherit; left: inherit; right: inherit; top: inherit; bottom: inherit;margin-bottom:inherit;"></span></span></div><div style="float: left;">USD *</div></a><a style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; color: rgb(255, 255, 255); border-bottom: 1px solid rgb(68, 68, 68); overflow: hidden; font-size: 14px; font-weight: 700; line-height: 36px; padding-left: 10px; padding-right: 10px; cursor: pointer; display: block;" href="https://www.cryptocompare.com/coins/blk/overview/" title="BlackCoin Price and market cap" target="_blank"><div style="float: right; line-height: 35px; font-size: 14px; font-weight: normal;"> <span style="font-weight: 700; color: #A11B0A;">        € 0.4146         <span style="font-weight: normal; color: #A11B0A"> (-5.94%) <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzODYuMjU3IDM4Ni4yNTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4Ni4yNTcgMzg2LjI1NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8cG9seWdvbiBwb2ludHM9IjAsOTYuODc5IDE5My4xMjksMjg5LjM3OSAzODYuMjU3LDk2Ljg3OSAiIGZpbGw9IiNhMTFiMGEiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" style="width: 12px; height: 12px; vertical-align: inherit; border: 0; position: inherit; max-width: inherit; left: inherit; right: inherit; top: inherit; bottom: inherit;margin-bottom:inherit;"></span></span></div><div style="float: left;">EUR *</div></a></div><div class="div-symbol-explanation" style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; color: rgb(23, 23, 23); text-align: right; font-size: 11px; font-weight: normal; font-style: italic; line-height: 20px; margin-right: 0px; padding-right: 10px; margin-bottom: 3px;">* Price &amp; chart conversion through BTC</div></div></p></center></div>
+ 
+                    <div class="textwidget"><center>
+                <script type="text/javascript">
+                baseUrl = "https://widgets.cryptocompare.com/";
+                var scripts = document.getElementsByTagName("script");
+                var embedder = scripts[ scripts.length - 1 ];
+                (function (){
+                var appName = encodeURIComponent(window.location.hostname);
+                if(appName==""){appName="local";}
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.async = true;
+                var theUrl = baseUrl+'serve/v1/coin/list?fsym=BTC&tsyms=BTC,USD';
+                s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                embedder.parentNode.appendChild(s);
+                })();
+                    </script><script type="text/javascript" async="" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/list"></script><div class="ccc-widget ccc-list"><div style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; border-radius: 4px 4px 0px 0px; border: 1px solid rgb(23, 23, 23);"><div class="header-div" style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; border-radius: 4px 4px 0px 0px; text-align: left; font-weight: bold; font-size: 20px; line-height: 30px; height: 50px; padding: 10px; border-bottom: 1px solid rgb(23, 23, 23); box-sizing: border-box;"><a href="https://www.cryptocompare.com/coins/btc/" rel="nofollow" target="_blank" style="color: #FFF; text-decoration: none;"> <img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/btc.png" style="width: 26px; height: 26px; vertical-align: middle; margin-bottom: 3px; border: 0; position: inherit; max-width: inherit; left: inherit; right: inherit; top: inherit; bottom: inherit;margin-bottom:inherit;"> BTC</a><a href="https://www.cryptocompare.com/coins/btc/" rel="nofollow" style="display: inline-block; float: right; background: #171717; border: 1px solid #171717; border-radius: 10px; padding-left: 15px; padding-right: 15px; font-size: 13px; line-height: 25px; margin-top: 2px; text-decoration: none; color: #171717;">    Followers     <span style="display: inline-block; padding-left: 10px; border-left: 1px solid #171717; margin-left: 10px; font-size: 11px; font-weight: normal; color: #171717;"> 48129</span></a></div><a style="background: rgb(23, 23, 23) none repeat scroll 0% 0%; color: rgb(255, 255, 255); border-bottom: 1px solid rgb(68, 68, 68); overflow: hidden; font-size: 14px; font-weight: 700; line-height: 36px; padding-left: 10px; padding-right: 10px; cursor: pointer; display: block;" href="https://www.cryptocompare.com/coins/btc/overview/USD" title="Bitcoin - USD Price and market cap" target="_blank"><div style="float: right; line-height: 35px; font-size: 14px; font-weight: normal;"> <span style="font-weight: 700; color: #A11B0A;">        $ 10,861.5         <span style="font-weight: normal; color: #A11B0A"> (-5.96%) <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzODYuMjU3IDM4Ni4yNTciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4Ni4yNTcgMzg2LjI1NzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8cG9seWdvbiBwb2ludHM9IjAsOTYuODc5IDE5My4xMjksMjg5LjM3OSAzODYuMjU3LDk2Ljg3OSAiIGZpbGw9IiNhMTFiMGEiLz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" style="width: 12px; height: 12px; vertical-align: inherit; border: 0; position: inherit; max-width: inherit; left: inherit; right: inherit; top: inherit; bottom: inherit;margin-bottom:inherit;"></span></span></div><div style="float: left;">USD</div></a></div></div></center></div></div>
+ 
+                    <div class="col-lg-4 mb-sm-20">
+                        <li class="dropdown-header">Reddit</li>
+                        <li role="separator" class="divider"></li>
+                    <div class="x-text"><center><script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/a" type="text/javascript"></script><div class="rembeddit"><div class="reddit-header"><h4 class="reddit-title"><a href="https://www.reddit.com/r/blackcoin/"><img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/spreddit1.gif" alt=""></a>links from <a href="https://www.reddit.com/r/blackcoin/">blackcoin.reddit.com</a></h4></div><div class="rembeddit-content"><div><div class="reddit-link even first-half thing id-t3_7s7lgh "><a href="https://www.reddit.com/r/blackcoin/comments/7s7lgh/blackcoin_core_v_125_released/" class="reddit-voting-arrows" target="_blank"><img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widget_arrows.gif" alt="vote"></a><div class="reddit-entry entry unvoted"><a class="reddit-link-title may-blank" href="https://github.com/CoinBlack/blackcoin/releases/tag/v1.2.5">BlackCoin core v. 1.2.5 released</a><br><small><span class="score dislikes">8 points</span><span class="score unvoted">9 points</span><span class="score likes">10 points</span> | <a class="reddit-comment-link may-blank" href="https://www.reddit.com/r/blackcoin/comments/7s7lgh/blackcoin_core_v_125_released/">16 comments</a></small></div><div class="reddit-link-end"></div></div><div class="reddit-link odd first-half thing id-t3_7s6ebv "><a href="https://www.reddit.com/r/blackcoin/comments/7s6ebv/why_are_you_holding_blackcoin/" class="reddit-voting-arrows" target="_blank"><img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widget_arrows.gif" alt="vote"></a><div class="reddit-entry entry unvoted"><a class="reddit-link-title may-blank" href="https://www.reddit.com/r/blackcoin/comments/7s6ebv/why_are_you_holding_blackcoin/">Why are you holding Blackcoin?</a><br><small><span class="score dislikes">1 point</span><span class="score unvoted">2 points</span><span class="score likes">3 points</span> | <a class="reddit-comment-link may-blank" href="https://www.reddit.com/r/blackcoin/comments/7s6ebv/why_are_you_holding_blackcoin/">5 comments</a></small></div><div class="reddit-link-end"></div></div><div class="reddit-link even first-half thing id-t3_7rvqot "><a href="https://www.reddit.com/r/blackcoin/comments/7rvqot/should_we_be_using_lore_or_124_right_now/" class="reddit-voting-arrows" target="_blank"><img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widget_arrows.gif" alt="vote"></a><div class="reddit-entry entry unvoted"><a class="reddit-link-title may-blank" href="https://www.reddit.com/r/blackcoin/comments/7rvqot/should_we_be_using_lore_or_124_right_now/">Should we be using Lore or 1.2.4 right now?</a><span class="linkflairlabel">Unanswered</span><br><small><span class="score dislikes">1 point</span><span class="score unvoted">2 points</span><span class="score likes">3 points</span> | <a class="reddit-comment-link may-blank" href="https://www.reddit.com/r/blackcoin/comments/7rvqot/should_we_be_using_lore_or_124_right_now/">9 comments</a></small></div><div class="reddit-link-end"></div></div><div class="reddit-link odd second-half thing id-t3_7rq20h "><a href="https://www.reddit.com/r/blackcoin/comments/7rq20h/we_are_now_accepting_blackcoin_blk_for_all_domain/" class="reddit-voting-arrows" target="_blank"><img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widget_arrows.gif" alt="vote"></a><div class="reddit-entry entry unvoted"><a class="reddit-link-title may-blank" href="https://abacohosting.com/we-are-now-accepting-blackcoin-for-all-domain-registrations-hosting.html">We are now accepting Blackcoin BLK for all Domain Registrations &amp; Web Hosting Packages!</a><span class="linkflairlabel">Adoption!</span><br><small><span class="score dislikes">15 points</span><span class="score unvoted">16 points</span><span class="score likes">17 points</span> | <a class="reddit-comment-link may-blank" href="https://www.reddit.com/r/blackcoin/comments/7rq20h/we_are_now_accepting_blackcoin_blk_for_all_domain/">5 comments</a></small></div><div class="reddit-link-end"></div></div><div class="reddit-link even second-half thing id-t3_7roxj1 "><a href="https://www.reddit.com/r/blackcoin/comments/7roxj1/next_steps_of_nonprofit/" class="reddit-voting-arrows" target="_blank"><img src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widget_arrows.gif" alt="vote"></a><div class="reddit-entry entry unvoted"><a class="reddit-link-title may-blank" href="https://www.reddit.com/r/blackcoin/comments/7roxj1/next_steps_of_nonprofit/">Next steps of Non-Profit</a><span class="linkflairlabel">Discussion</span><br><small><span class="score dislikes">4 points</span><span class="score unvoted">5 points</span><span class="score likes">6 points</span> | <a class="reddit-comment-link may-blank" href="https://www.reddit.com/r/blackcoin/comments/7roxj1/next_steps_of_nonprofit/">21 comments</a></small></div><div class="reddit-link-end"></div></div></div></div></div></center></div></div>
+ 
+                    <div class="col-lg-4 mb-sm-20">
+                        <li class="dropdown-header">Twitter</li>
+                        <li role="separator" class="divider"></li>
+ 
+                    <div class="textwidget"><center><p style=" background-color: #171717;"><iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 520px; height: 560px; padding: 0px; border: medium none; max-width: 100%; min-width: 180px; margin-top: 0px; margin-bottom: 0px; min-height: 200px;" data-widget-id="746421924109164548" title="Twitter Timeline" frameborder="0"></iframe><br>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p></center></div>
+                    </div></ul>
+                </li><!-- / News -->                              
+              </ul><!-- / .nav .navbar-nav .navbar-right -->
+            </div><!--/.navbar-collapse -->
+          </div><!-- / .container -->
+        </nav><aside class="gitter-chat-embed is-collapsed"><div class="gitter-chat-embed-action-bar"><a class="gitter-chat-embed-action-bar-item gitter-chat-embed-action-bar-item-pop-out" aria-label="Open Chat in Gitter.im" href="https://gitter.im/BlackCoin_Hub/General" target="_blank"></a><button class="gitter-chat-embed-action-bar-item gitter-chat-embed-action-bar-item-collapse-chat" aria-label="Collapse Gitter Chat"></button></div><div class="gitter-chat-embed-loading-wrapper">
+        <div class="gitter-chat-embed-loading-indicator gitter-icon"></div>
+      </div></aside><a href="https://gitter.im/BlackCoin_Hub/General" class="gitter-open-chat-button">Open Chat</a><!-- / .navbar -->
+ 
+ 
+               
+   
+ 
+       
+       
+ 
+    <!-- ========== Bounties ========== -->
+    <header class="page-title pt-small">
+          <div class="container">
+            <div class="row">
+            <center><h2>Bounties</h2></center>
+            <center><h6><span class="subheading">Complete the bounty and collect the award</span></h6></center>            
+            </div>
+          </div>
+        </header>
+                               
+       <!-- ========== Progress Bars ========== -->
+ 
+        <section class="container section">
+       
+       
+        <div class="row ws-m">
+            <h4 class="text-center ws-s">View Blackcoin Blockchain Assets in Blockchain Explorer</h4>
+ 
+            <div class="col-md-offset-2 col-md-4 mb-sm-50">
+             <div>
+                <h6><span style="color: #B09261;">Bounty goal: <span class="bounty-goal">2000 BLK</span></span></h6>
+             <br>
+             BLK donation address: <span style="color: #B09261;" class="addr_string">bTb9MTJtT6gjSA1nfR9GxRrAA7r7NzdY4R</span>
+             <p>(Donation address held by: Janko33bd, Tapius &amp; VinceBLK) -<a href="https://chainz.cryptoid.info/blk/address.dws?bTb9MTJtT6gjSA1nfR9GxRrAA7r7NzdY4R.htm"> Link</a>
+              </p></div>
+           
+           
+            <!-- Item 1 -->
+              <div class="progress-group">
+                <div class="progress progress-thin">
+                  <div class="progress-bar" id="progress-raised" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 12%;">
+                    <span class="sr-only">12% Complete</span>
+                  </div>
+                </div>
+              <span class="progress-title">BLK raised: <span style="color: #B09261;">0</span></span>
+                <span class="progress-value raised-percent" id="raised-value">12%</span>
+              </div>
+ 
+              <!-- Item 2 -->
+              <div>
+        Person responsible: <span style="color: #B09261;">Tapius</span>
+            </div>
+            <div>
+        Project on <a href="https://www.reddit.com/r/blackcoin/comments/7raf09/request_colored_coinstokensassets_viewer_on/">Reddit</a>
+              </div>
+ 
+              <!-- Item 3 -->
+              <div class="progress-group">
+                <div class="progress progress-thin">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only">0% Complete</span>
+                  </div>
+                </div>
+                <span class="progress-title">Project completion</span>
+                <span class="progress-value">0%</span>
+              </div>
+            </div><!-- / .col-md-4 -->
+ 
+            <div class="col-md-4">
+              <p>This bounty is for creating a Blackcoin Blockchain explorer with ability to see the Iris created assets on the blockchain </p>
+              <p>Something similar to how we can see tokens on other coins' blockchain explorers which also have this ability</p>
+            </div><!-- / .col-md-4 -->
+          </div><!-- / .row -->
+ 
+      <div class="row ws-m">
+            <h4 class="text-center ws-s">Raspberry Pi - BLK wallets staking guide</h4>
+ 
+            <div class="col-md-offset-2 col-md-4 mb-sm-50">
+             <div>
+                <h6><span style="color: #B09261;">Bounty goal: <span class="bounty-goal">80 BLK</span></span></h6>
+             <br>            
+             <p>BLK donation address: <span style="color: #B09261;" class="addr_string">bRkgRgDGbasGUFWmC657vXuV2nMKLPUMJw</span>
+             </p><p>(Donation address held by: Caad12, Janko33bd &amp; VinceBLK) -<a href="https://chainz.cryptoid.info/blk/search.dws?q=bRkgRgDGbasGUFWmC657vXuV2nMKLPUMJw"> Link</a>
+              </p></div>                   
+          <!-- Item 1 -->
+              <div class="progress-group">
+                <div class="progress progress-thin">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width: 44%;">
+                    <span class="sr-only">44% Complete</span>
+                  </div>
+                </div>
+              <span class="progress-title">BLK raised: <span style="color: #B09261;">0</span></span>
+                <span class="progress-value raised-percent">44%</span>
+              </div>
+ 
+              <!-- Item 2 -->
+              <div>
+        Person responsible: <span style="color: #B09261;">Caad12</span>
+              </div>
+ 
+              <!-- Item 3 -->
+              <div class="progress-group">
+                <div class="progress progress-thin">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only">0% Complete</span>
+                  </div>
+                </div>
+                <span class="progress-title">Project completion</span>
+                <span class="progress-value">0%</span>
+              </div>
+            </div><!-- / .col-md-4 -->
+ 
+            <div class="col-md-4">
+              <p>Detailed paper guide on how to configure a raspberry pi
+ to run the Blackcoin wallets (both Original and Lore) and stake coins.
+ Paper will be detailed including screenshots of the raspberry pi along
+with details and step by step instructions for how to successfully
+configure.  Included will be a small write up on Blackcoin and why
+staking on a Raspberry pi is more beneficial to some than staking on a
+traditional laptop/desktop.</p>
+              <p>In addition, the guide will be aesthetically pleasing
+and in line with Blackcoin as opposed to simply a word document with a
+white background.</p>
+            </div><!-- / .col-md-4 -->
+          </div><!-- / .row -->
+   
+       
+       
+       
+      <br> 
+      <center><span><i class="fa fa-info-circle"></i> If you would like to support BlackCoin with your project and you need a donation, contact the team on <a href="https://gitter.im/BlackCoin_Hub">Gitter</a> to be added to the Bounties section.</span></center>
+          </section><!-- / .container -->
+ 
+ 
+ 
+        <!-- ========== Footer Widgets ========== -->
+       
+        <footer class="footer-widgets">
+         
+ 
+ 
+          <!-- Copyright -->
+          <div class="copyright">
+            <div class="container">
+              <div class="row">
+               
+                <div class="col-sm-6">
+                  <small>© 2014-2018 BlackCoin. All Rights Reserved.</small>
+                </div>
+ 
+                <div class="col-sm-6">
+                  <small><a href="#page-top" class="pull-right to-the-top">To the top<i class="fa fa-angle-up"></i></a></small>
+                </div>
+ 
+              </div><!-- / .row -->
+            </div><!-- / .container -->
+          </div><!-- / .copyright -->
+ 
+        </footer><!-- / .footer-widgets -->
+   
+    <div id="pum-2890" class="pum pum-overlay pum-theme-2865 popmake-overlay" data-popmake="{&quot;id&quot;:2890,&quot;slug&quot;:&quot;slack&quot;,&quot;theme_id&quot;:2865,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;auto&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height_auto&quot;:&quot;1&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;grow&quot;,&quot;animation_speed&quot;:&quot;50&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;location&quot;:&quot;center &quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;,&quot;f4_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}" role="dialog" aria-hidden="true">
+        <div id="popmake-2890" class="pum-container popmake theme-2865 pum-position-fixed">
+            <div class="pum-content popmake-content">
+            <center><span style="color: #ffffff;">Slack</span></center><br>
+            <center><a href="https://slack-blackcoin.herokuapp.com/">Join</a> / <a href="https://blackcoin-team.slack.com/">Log in</a></center>
+            </div>
+            <button type="button" class="pum-close popmake-close" aria-label="Close">
+            ×            </button>
+            </div>
+    </div>    
+       
+        <div id="pum-2900" class="pum pum-overlay pum-theme-2865 popmake-overlay" data-popmake="{&quot;id&quot;:2900,&quot;slug&quot;:&quot;slack&quot;,&quot;theme_id&quot;:2865,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;auto&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height_auto&quot;:&quot;1&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;grow&quot;,&quot;animation_speed&quot;:&quot;50&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;location&quot;:&quot;center &quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;,&quot;f4_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}" role="dialog" aria-hidden="true">
+            <div id="popmake-2900" class="pum-container popmake theme-2865 pum-position-fixed">
+                <div class="pum-content popmake-content">
+                <center><span style="color: #ffffff;">GitHub</span></center><br>
+                <center><a href="https://github.com/CoinBlack">BlackCoin</a><span style="color: #d9d9d9;"> / </span><a href="https://github.com/janko33bd/bitcoin/commits/Blackcoin-Lore">BlackCoin Lore</a><span style="color: #d9d9d9;"> / </span><a href="https://github.com/joshuajbouw/joshuajbouw.github.io">Website</a></center><br>
+                </div>
+                    <button type="button" class="pum-close popmake-close" aria-label="Close">
+            ×            </button>
+            </div>
+         </div>
+ 
+ 
+        <!-- ========== Scripts ========== -->
+    <script type="text/javascript" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/core.js"></script>
+        <script type="text/javascript" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/position.js"></script>
+        <script type="text/javascript">
+    /* <![CDATA[ */
+    var pum_vars = {"default_theme":"2860"};
+    var popmake_default_theme = "2860";
+    /* ]]> */
+        </script>
+        <script type="text/javascript" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/site.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery-2.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/google-fonts.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_007.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/bootstrap.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/bootstrap-hover-dropdown.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_009.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_005.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_004.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_002.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/slick.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_006.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/countup.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/isotope.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/jquery_008.js"></script>
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/wow.js"></script>
+ 
+        <!-- Definity JS -->
+        <script src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/main.js"></script>
+   
+ 
+<div id="ascrail2000" class="nicescroll-rails" style="width: 8px; z-index: auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; cursor: default; position: fixed; top: 0px; height: 100%; right: 0px; opacity: 0;"><div style="position: relative; top: 0px; float: right; width: 8px; height: 603px; background-color: rgb(0, 0, 0); border: 0px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 8px; z-index: auto; background: rgb(255, 255, 255) none repeat scroll 0% 0%; position: fixed; left: 0px; width: 100%; bottom: 0px; cursor: default; display: none; opacity: 0;"><div style="position: relative; top: 0px; height: 8px; width: 1920px; background-color: rgb(0, 0, 0); border: 0px solid rgb(255, 255, 255); background-clip: padding-box; border-radius: 5px;"></div></div><iframe scrolling="no" allowtransparency="true" src="BlackCoin%20-%20Bounties%20&amp;%20Donate-Dateien/widget_iframe.htm" style="display: none;" frameborder="0"></iframe><iframe id="rufous-sandbox" scrolling="no" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" title="Twitter analytics iframe" frameborder="0"></iframe></body></html>
