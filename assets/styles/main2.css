@@ -1783,7 +1783,7 @@ fieldset[disabled] .form-control:hover {
   background: #ececec;
 }
 
-.progress .progress-bar {
+.progress .progress-bar .progress-bar2 {
   background: #111;
   font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 13px;
