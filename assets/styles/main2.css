@@ -1791,6 +1791,14 @@ fieldset[disabled] .form-control:hover {
   letter-spacing: 1px;
 }
 
+.progress-bar2 {
+  background: #111;
+  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.9em;
+  letter-spacing: 1px;
+}
+
 .progress-thin {
   height: 3px;
 }
